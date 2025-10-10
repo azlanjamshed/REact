@@ -1,9 +1,11 @@
 import Count from "./pages/Count";
+import Todo from "./pages/Todo";
 
 function App() {
   return (
     <>
-      <Count />
+      {/* <Count /> */}
+      <Todo />
     </>
   );
 }
