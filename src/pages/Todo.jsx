@@ -84,6 +84,7 @@ const Todo = () => {
                     task.done ? "line-through text-gray-500" : ""
                   }`}
                 >
+                  <span className="mr-5">{index + 1}-</span>
                   {task.text}
                 </p>
               )}
