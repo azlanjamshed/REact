@@ -4,7 +4,8 @@ import ExpenseTracker from "./pages/ExpenseTracker";
 import SearchFilter from "./pages/SearchFilter";
 import Todo from "./pages/Todo";
 import Home from "./pages/Home";
-import Main from "./pages/Tabs Component/Main";
+import TabMain from "./pages/Tabs Component/TabMain";
+import FAQMain from "./pages/FAQ/FAQMain";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/todo" element={<Todo />} />
         <Route path="/search-filter" element={<SearchFilter />} />
         <Route path="/expense-tracker" element={<ExpenseTracker />} />
-        <Route path="/tabs-components" element={<Main />} />
+        <Route path="/tabs-components" element={<TabMain />} />
+        <Route path="/faq" element={<FAQMain />} />
       </Routes>
     </>
   );
