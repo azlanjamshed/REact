@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ExpenseTracker = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const [description, setDescription] = useState("");
   const [type, setType] = useState("income");
-  const [transaction, setTransaction] = useState([]);
+  const [transaction, setTransaction] = useState(() => {
+    const savedTransaction = localStorage.getItem("transaction");
+    return savedTransaction ? JSON.parse(savedTransaction) : [];
+  });
 
   const addTransaction = () => {
     if (!description || !amount) return;
@@ -29,6 +32,10 @@ const ExpenseTracker = () => {
     .reduce((acc, curr) => acc + curr.amount, 0);
 
   const balance = totalIncome - totalExpense;
+
+  useEffect(() => {
+    localStorage.setItem("transaction", JSON.stringify(transaction));
+  }, [transaction]);
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
