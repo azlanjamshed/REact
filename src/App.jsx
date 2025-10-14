@@ -6,6 +6,7 @@ import Todo from "./pages/Todo";
 import Home from "./pages/Home";
 import TabMain from "./pages/Tabs Component/TabMain";
 import FAQMain from "./pages/FAQ/FAQMain";
+import UserListApp from "./pages/API Fetch/UserList.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/tabs-components" element={<TabMain />} />
         <Route path="/faq" element={<FAQMain />} />
+        <Route path="user-list-app" element={<UserListApp />} />
       </Routes>
     </>
   );

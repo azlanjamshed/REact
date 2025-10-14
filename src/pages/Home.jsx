@@ -13,6 +13,17 @@ const Home = () => {
       color: "bg-yellow-500",
     },
     { title: "Search Filter", route: "/search-filter", color: "bg-purple-500" },
+    {
+      title: "Tabs Component",
+      route: "/tabs-components",
+      color: "bg-pink-500",
+    },
+    { title: "FAQ Section", route: "/faq", color: "bg-red-500" },
+    {
+      title: "User List App(Fetch API)",
+      route: "/user-list-app",
+      color: "bg-teal-500",
+    },
   ];
 
   return (
