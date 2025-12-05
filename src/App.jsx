@@ -7,14 +7,26 @@ import Home from "./pages/Home";
 import TabMain from "./pages/Tabs Component/TabMain";
 import FAQMain from "./pages/FAQ/FAQMain";
 import UserListApp from "./pages/API Fetch/UserList.jsx";
+import Form from "./pages/Form/Form.jsx";
+import YupandReactForm from "./pages/Form/YupandReactForm.jsx";
+import Navbar from "./components/Navbar.jsx";
+import AboutMe from "./pages/About";
+import Experiences from "./pages/Experiences";
+import Recommended from "./pages/Recommended";
 
 function App() {
   return (
     <>
-      {/* <Count /> */}
-      {/* <Todo /> */}
-      {/* <SearchFilter /> */}
-      {/* <ExpenseTracker /> */}
+      {/* <div className="min-h-screen bg-[#363C43] ">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<AboutMe />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/recommended" element={<Recommended />} />
+        </Routes>
+      </div> */}
+
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Count />} />
@@ -23,7 +35,9 @@ function App() {
         <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/tabs-components" element={<TabMain />} />
         <Route path="/faq" element={<FAQMain />} />
-        <Route path="user-list-app" element={<UserListApp />} />
+        <Route path="/user-list-app" element={<UserListApp />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/form-reactHookForm-yup" element={<YupandReactForm />} />
       </Routes>
     </>
   );
